@@ -1,0 +1,24 @@
+Title: Knowledge Model Entry: Architecture and Best Practices for Building AI Crypto Trading Bots
+Overview
+Building effective AI crypto trading systems requires a modular, layered architecture rather than relying on a standalone AI model. The primary objective is to define a precise operational role, enforce rigorous risk management before execution, and prioritize data quality and explainability over model complexity.
+Core Architectural Layers
+An effective AI trading bot consists of five distinct, sequential layers:
+ * Data: Inputs focused on fundamental market metrics (price action, structure, volatility, trend state, and volume behavior).
+ * Signal Logic: The rules or models that evaluate data to identify specific setups.
+ * Risk Control: Hardcoded rules governing exposure, position sizing, and stop-losses.
+ * Execution: The mechanism for placing and managing orders.
+ * Review: Ongoing performance analysis and auditing.
+Key Takeaways and Principles
+ * Narrow Role Focus: Start with a single, highly specific job (e.g., filtering breakout setups or watchlist candidates) rather than attempting a complex, multi-objective system. This makes testing, debugging, and iterative improvement manageable.
+ * Risk-First Design: Risk rules must precede live execution and AI integration. Essential safeguards include defining allowable daily losses, hard stop-losses, maximum drawdown caps, and market conditions that automatically disable trading.
+ * Data Quality Over Model Hype: Simple, high-quality features (price, volume, volatility) outperform complex inputs that frequently introduce noise and overfitting.
+ * Explainability: The system must be capable of transparently explaining the rationale behind every trade decision.
+Safe Progression Path
+ * Build a non-AI baseline version of the system to establish fundamental functionality.
+ * Integrate AI selectively only where it measurably improves a single part of the pipeline.
+ * Conduct extensive paper trading to test performance under realistic market conditions.
+ * Deploy live capital only after the system successfully survives paper testing.
+Practical Implementation Recommendations
+ * Begin with watchlist and setup filtering rather than full trade automation.
+ * Define strict position sizing and stop-loss rules before introducing machine learning logic.
+ * Utilize dedicated paper trading accounts to validate strategy stability without financial risk.
