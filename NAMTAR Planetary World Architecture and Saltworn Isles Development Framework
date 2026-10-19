@@ -1,0 +1,23 @@
+NAMTAR Planetary World Architecture and Saltworn Isles Development Framework
+PROJECT SPECIFICATIONS AND PARAMETERS:
+ * Target Engine: Unreal Engine 5.8.
+ * World Type: Open-World Planetary Survival / PvPvE.
+ * Horizontal Playable Region: 65 km × 65 km (6,500,000 UU × 6,500,000 UU).
+ * Total Surface Area: 4,225 km² / 1,631 square miles.
+ * Scale Conversion: 1 Unreal Unit (UU) equals 1 centimeter.
+ * Surface Distribution: 55-65% ocean (approx. 2,325-2,746 km²) and 35-45% land (approx. 1,479-1,901 km²).
+ * Coordinate System: X represents East/West, Y represents North/South, and Z represents Elevation, with Sea Level locked at Z = 0.
+VERTICAL LAYERING ARCHITECTURE:
+ * Vertical scope spans from the deepest ocean trenches (-10 km) to the near-space layer (+100 km).
+ * Primary surface survival environment ranges from sea level to mountain peaks (+12 km).
+ * Atmospheric and near-space combat/exploration layers extend from +12 km to +100 km.
+SALTWORN ISLES INITIAL DEVELOPMENT FOCUS:
+ * Location: Southwestern quadrant of the planetary map (file_00000000e24481fd8adcdf922dec2abb.png).
+ * Visual and Topographical Reference: Jagged coastline, narrow land bridges, scattered outer islets, and a central elevated landmass (Screenshot 2026-08-16 184939.jpg).
+ * Ocean Zones: Integrated shallow coastal waters (0 to -200 m), continental shelf (200 m to 1,000 m), and deep ocean drop-offs (1,000 m to 6,000 m) surrounding the island.
+STEP-BY-STEP DEVELOPMENT GUIDE FOR BEGINNERS:
+ * Initialize Master Project Settings: Configure the UE 5.8 Open World template, lock 1 UU = 1 cm scale, set world bounds to 6,500,000 UU, and establish Z = 0 sea level.
+ * Establish World Partition: Divide the 65 km × 65 km surface into streamable regional cells to optimize performance and memory management.
+ * Sculpt Macro Terrain: Block out the Saltworn Isles geography matching reference heightmaps and planetary layouts, targeting elevations between 0 m and 1,000 m.
+ * Configure Ocean Ecosystems: Establish active water planes at Z = 0 and shape coastal, shelf, and deep-sea depth zones for multi-tier gameplay.
+ * Verify Player Scale and Biomes: Test player traversal metrics against real-world scale benchmarks and apply dense alien biome materials across the terrain.
