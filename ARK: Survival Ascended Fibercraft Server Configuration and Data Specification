@@ -1,0 +1,27 @@
+ARK: Survival Ascended Fibercraft Server Configuration and Data Specification (2026)
+1. Creature and Player Status Multipliers
+ * Creature Food Drain Multiplier: Current value is set to 1; recommended Fibercraft rate is 1.5 – 2.0 to accelerate wild taming progression without instantly starving base dinosaurs.
+ * Creature Health Recovery Multiplier: Current value is set to 1; recommended rate is 3.0 – 5.0 to offset high PvP damage and eliminate the need for endless force-feeding.
+ * Creature Resistance Multiplier: Current value is set to 1; recommended rate is 1.0 because values above 1.0 increase damage taken.
+ * Creature Stamina Drain Multiplier: Current value is set to 1; recommended rate is 0.2 – 0.4 to allow combat mounts and flyers to sprint and attack longer during extended raids.
+ * Player Damage Multiplier: Current value is set to 1; recommended rate is 1.0 to prevent players from one-shotting each other through high-tier armor.
+ * Player Food Drain Multiplier: Current value is set to 0.5; recommended rate is 0.1 – 0.2 to eliminate starvation friction while players focus on fast base-building.
+ * Player Health Recovery Multiplier: Current value is set to 1.5; recommended rate is 3.0 – 5.0 to encourage fast-paced foot PvP without requiring constant medical brew spam.
+ * Player Resistance Multiplier: Current value is set to 1; recommended rate is 1.0 to preserve proper armor calculations for Flak and Tek gear.
+ * Player Stamina Drain Multiplier: Current value is set to 0.8; recommended rate is 0.1 – 0.2 to grant near-infinite sprinting that matches high-speed Fibercraft movement.
+ * Player Water Drain Multiplier: Current value is set to 0.4; recommended rate is 0.1 – 0.2 to remove hydration management friction.
+ * Raid Dino Food Drain Multiplier: Current value is set to 0.4; recommended rate is 0.01 – 0.1 to prevent temporary siege mounts like Titansaurs from starving mid-raid.
+ * Swim Speed Multiplier: Current value is set to 5; recommended rate is 1.5 – 2.0 because a 5.0 multiplier interacts with high player Oxygen stats in Unreal Engine 5 physics to launch players across the map.
+ * Tamed Creature Food Drain Multiplier: Current value is set to 0.8; recommended rate is 0.1 – 0.3 to prevent base dinosaurs from starving during offline periods.
+2. Taming and Torpor Mechanics
+ * Tamed Creature Torpor Drain Multiplier: Current value is set to 1.5; recommended rate is 3.0 – 5.0 to ensure combat mounts wake up quickly if targeted by weaponized torpor or club spam in PvP.
+ * Wild Creature Food Drain Multiplier: Current value is set to 1; recommended rate is 3.0 – 5.0 to drain hunger rapidly upon knockout and enable near-instant taming.
+ * Wild Creature Torpor Drain Multiplier: Current value is set to 1; recommended rate is 0.2 – 0.5 to prevent high-level wild creatures from waking up prematurely before the food drain completes.
+ * Passive Tame Interval Multiplier: Current value is set to 1; recommended rate is 0.05 – 0.1 leveraging inverse scaling (where higher numbers increase wait time) to make passive tames nearly instantaneous.
+ * Taming Speed Multiplier: Current value is set to 1; recommended rate is 10.0 – 50.0 to finish knockout tames within 1 to 2 feedings.
+3. Turret and Raid Balance Settings
+ * Turret Creature Damage Multiplier: Current value is set to 10; recommended rate is 1.5 – 3.0. Setting this to 10 melts soaking dinosaurs instantly and breaks raid balance, whereas 1.5 – 3.0 accounts for infinite ammo availability and allows viable soaking strategies.
+4. Player Progression and Leveling Curve (Levels 92–105)
+ * Levels 92–104 Progression: Configured with 1 XP requirement (or 0 for level 93), allowing players to advance past these levels almost instantly.
+ * Level 105 Default State: Beacon auto-filled Level 105 with vanilla cumulative player XP of 4,098,439, resulting in an impractical 59-day Tek Bed grind.
+ * Level 105 Recommended Setting: Set Level XP to 50,000 – 100,000. This grants instant access to core engrams through level 104 while requiring a moderate challenge (such as killing an Alpha creature or completing a boss fight) to achieve maximum level.
