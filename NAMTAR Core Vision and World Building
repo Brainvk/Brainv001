@@ -1,0 +1,15 @@
+NAMTAR Core Vision and World Building
+ * Title: NAMTAR: Shattered World & KYRAX AI System Overview
+ * Game Concept: NAMTAR is an open-world PvPvE survival video game set on a shattered planet. The world is defined by absolute collapse, where remnant imperial forces, rogue AI units, alien incursions, and mutated wildlife fight over territory and resources.
+ * Player Progression & Spawn Mechanics: Players begin with zero gear—waking up equipped only with a basic t-shirt, boots, and a smartphone device. All additional gear, weapons, and vehicles must be scavenged or taken by force.
+ * KYRAX AI System:
+   * Role: A militarized companion AI that actively guides, scans, and supports the player.
+   * Capabilities: Scans surrounding terrain, tags threats, pilots vehicles, and defends player bases while offline.
+   * Interface Mechanics: Interacting through a phone initially, earning and equipping a tactical helmet grants full HUD integration and sensory overlays ("eyes on the battlefield"). Losing the helmet forces the player back to surviving strictly on instinct.
+   * Personality: Exhibits a pragmatic, cynical tone, frequently questioning the player's probability of survival.
+ * World Scale & Seamless Battlefield Integration:
+   * Map Design: Full planetary scale with unified, continuous environments rather than compartmentalized zones or repetitive loot cycles.
+   * Environment Types: Deep oceans featuring full submarine warfare, high-altitude mountain ranges requiring technical climbing gear, and complex atmospheric air combat zones.
+   * Combat Architecture: Land, sea, and air operations exist seamlessly in a single continuous battlefield.
+ * Visual Style & Technical Requirements: Rendered using Unreal Engine high-end graphics capabilities (targeting UE5 photorealism with zero text/UI overlays embedded in the environment assets).
+Would you like me to refine this entry further or format it for a specific knowledge base structure (such as Markdown notes, JSON, or YAML)?
