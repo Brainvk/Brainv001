@@ -1,0 +1,83 @@
+SATCORP HQ SERVER ARCHITECTURE KNOWLEDGE MODEL
+Entity: SATCORP HQ Discord Server
+Type: Enterprise Operations Network + Public Community Hub
+Core Design Philosophy: A combined corporate operations network and public community housed within a single server, split into two primary layers (Community Layer and Operator Layer) using a modular 3D role matrix.
+ * STRUCTURAL MODEL & LAYER ARCHITECTURE
+ * Community Layer (Public Front End):
+   * Purpose: Normal members, creators, testers, players, and supporters interact here without knowledge of the operator infrastructure.
+   * Categories & Focus: SATCORP information, KYRAX information, Ki-Ra Studios, Games, PULSE, Announcements, Development updates, Community discussion, Gaming, Creator activities, Testing, Support, Suggestions, Events, and general community engagement.
+ * Operator Layer (Operator Back End / Working Environment):
+   * Purpose: Working environment for SATCORP personnel to plan, build, coordinate, deploy, monitor, document, manage, and execute.
+   * Operational Scope: Engineering, project management, infrastructure, AI/KYRAX management, QA, production, security, partnerships, client services, research, documentation, marketing, business ops, game teams, incident response, deployment reviews, and system monitoring.
+   * Principle of Least Privilege: Operators do not automatically gain access to everything; access is restricted by function and ecosystem assignment.
+ * CATEGORY LAYOUT (00 TO 16)
+Public & Community Categories:
+ * 00 // ARRIVAL
+ * 01 // THE INDEX
+ * 02 // PUBLIC OPERATIONS
+ * 03 // INTELLIGENCE
+ * 04 // KI-RA STUDIOS
+ * 05 // PROJECTS
+ * 06 // PULSE
+ * 07 // COMMUNITY
+ * 08 // ARCHIVE
+Operator & Command Categories:
+ * 09 // COMMAND
+ * 10 // SECURITY
+ * 11 // SYSTEMS
+ * 12 // SATCORP OPERATIONS (Global ops, project management, technology, infrastructure, R&D, QA, data analytics, marketing, business dev, client services, partnerships, finance, legal compliance, documentation)
+ * 13 // DIVISION OPERATIONS (SATCORP, KYRAX, KI-RA STUDIOS, PULSE)
+ * 14 // PROJECT OPERATIONS (NAMTAR, RELENTLESS, FORFEITURE, STREET LEVEL - broken down by production, engineering, design, art, audio, QA, builds, leadership)
+ * 15 // STAFF
+ * 16 // EXECUTIVE
+ * THE 3D INDEPENDENT ROLE MATRIX
+Instead of hundreds of rigid job-title roles, roles are built using three independent dimensions that stack together:
+A. Authority (Hierarchy, Visual Identity, and Core Permissions):
+ * ANU
+ * SATCORP EXECUTIVE
+ * COMMAND
+ * DIVISION HEAD
+ * DEPARTMENT LEAD
+ * TEAM LEAD
+ * SENIOR OPERATOR
+ * OPERATOR
+ * CONTRIBUTOR
+ * TESTER
+ * CREATOR
+ * COMMUNITY MEMBER
+B. Function (Granular Access & Skill Domain):
+ * OPERATIONS
+ * ENGINEERING
+ * INFRASTRUCTURE
+ * AI / INTELLIGENCE
+ * GAME DEVELOPMENT
+ * GAME DESIGN
+ * PRODUCTION
+ * CREATIVE
+ * ART
+ * AUDIO
+ * QA
+ * SECURITY
+ * DATA
+ * MARKETING
+ * COMMUNITY
+ * BUSINESS DEVELOPMENT
+ * CLIENT SERVICES
+ * PARTNERSHIPS
+ * FINANCE
+ * LEGAL
+ * DOCUMENTATION
+ * IT
+C. Ecosystem (Visibility & Project Scope):
+ * SATCORP
+ * KYRAX
+ * KI-RA STUDIOS
+ * NAMTAR
+ * RELENTLESS
+ * FORFEITURE
+ * STREET LEVEL
+ * PULSE
+ * CORE FUNCTIONAL LAYERS & ROLES
+ * Command Layer: Decide, authorize, prioritize, resolve incidents, govern the ecosystem.
+ * KYRAX Layer: Automate, observe, report, route, assist, integrate systems (acting as the server's central nervous system and automation interface).
+ * Cross-Division Flexibility: Operators can support multiple projects/divisions (e.g., an infrastructure operator supporting KYRAX, NAMTAR, RELENTLESS, and SATCORP HQ simultaneously) based on their function and assignment rather than siloed access.
