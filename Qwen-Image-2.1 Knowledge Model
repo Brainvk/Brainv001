@@ -1,0 +1,46 @@
+Qwen-Image-2.1 Knowledge Model Data Entry:
+Model Overview:
+ * Name: Qwen-Image-2.1
+ * Type: 7B parameter Diffusion Transformer (DiT) open-source image generation and editing model.
+ * Key Capabilities: Unified text-to-image generation, native transparency (RGBA) output, multi-reference image editing (up to 10 reference images), and local editing (via circles, painted annotations, or separate masks).
+ * Architecture: Single-stream DiT with 32 layers, mixed-granularity attention, block-causal attention, prefix KV cache reuse, and a unified Qwen3-VL 8B text-encoder. Uses Flow Matching with Euler discrete scheduling and dynamic shifting. Default native resolution is 2K (2048x2048) at 40 inference steps.
+Local Installation & Execution:
+ * Requirements: PyTorch >= 2.4.0, Transformers >= 5.17, Accelerate, Pillow, and git+[https://github.com/huggingface/diffusers](https://github.com/huggingface/diffusers) (Day-0 pipeline support via QwenImage21Pipeline).
+ * Baseline Hardware Footprint: Requires roughly 14-16GB VRAM for standard bfloat16 execution.
+ * Memory Optimization: Use pipe.enable_model_cpu_offload() instead of .to("cuda") to prevent OOM errors on GPUs with limited VRAM.
+Code Implementation Reference (Diffusers):
+ * Text-to-Image:
+   import torch
+from diffusers import QwenImage21Pipeline
+
+pipe = QwenImage21Pipeline.from_pretrained(
+    "Qwen/Qwen-Image-2.1", 
+    torch_dtype=torch.bfloat16
+)
+pipe.enable_model_cpu_offload()
+
+image = pipe(
+    prompt="A highly detailed cyberpunk city street, neon reflections on wet asphalt",
+    num_inference_steps=40,
+    width=2048,
+    height=2048,
+    generator=torch.Generator("cuda").manual_seed(42)
+).images[0]
+image.save("output.png")
+
+ * Image Editing (Single or Multi-Reference):
+   from PIL import Image
+
+input_image = Image.open("input.png")
+image = pipe(
+    prompt="Change the background to a sunset beach",
+    image=input_image,
+    num_inference_steps=40
+).images[0]
+image.save("edited_output.png")
+
+ * Transparent RGBA Generation Prompt Prefix:
+   "This is an RGBA image with transparency. <your description>. The image has alpha channel and the background is transparent."
+High-Performance Serving & Inference Engines:
+ * Supported Engines: vLLM-Omni and SGLang-Diffusion provide Day-0 native support.
+ * Optimization Features: Cross-step prefix KV caching (caches text/condition-image embeddings on step 1 and reuses across all denoising steps), CUDA Graph decodes, FP8 quantization, and tensor parallelism.
