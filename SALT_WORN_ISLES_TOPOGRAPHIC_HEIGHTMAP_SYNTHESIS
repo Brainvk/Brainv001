@@ -1,0 +1,13 @@
+TITLE: SALT_WORN_ISLES_TOPOGRAPHIC_HEIGHTMAP_SYNTHESIS
+PROJECT SPECIFICATIONS AND OVERVIEW
+This knowledge entry documents the generation and technical translation of the Saltworn Isles game map for Unreal Engine development. The workflow establishes foundational topography by transforming a 2D map reference into a normalized grayscale height map suitable for game engine terrain import.
+SOURCE REFERENCE ANALYSIS
+ * Input Layout Reference: The spatial design derives from a source map capture designated as Screenshot 2026-08-16 184939.jpg, explicitly labeled "SALTWORN ISLES".
+ * Topographical Layout: The source image features a primary central landmass, an extended western peninsula, and multiple surrounding island fragments embedded within coastal shelf waters.
+HEIGHT MAP GENERATION PARAMETERS
+ * Processed Output Asset: watermarked_img_17735944346140328151.jpg.
+ * Luminance Scale: Elevation is mapped via a grayscale gradient where absolute black corresponds to sea level and deep water boundaries, while progressive mid-tones and peak white values denote ascending terrain heights across the island ridges.
+ * Morphological Preservation: The conversion maintains the structural integrity of the primary coastline, internal plateau regions, and outlying island clusters to ensure spatial continuity during engine import.
+UNREAL ENGINE INTEGRATION WORKFLOW
+ * Engine Target: Configured for import into Unreal Engine landscape systems using standard heightmap formats (PNG/RAW).
+ * Calibration: Z-axis scale and Z-offset require adjustment within the engine's landscape creation tool to establish realistic vertical relief matching the procedural design parameters of the environment.
