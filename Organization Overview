@@ -1,0 +1,17 @@
+Organization Overview:
+SATCORP is a technology, infrastructure, and interactive entertainment enterprise structured into four interconnected core divisions operating on unified internal hardware and artificial intelligence infrastructure.
+Divisions & Core Operations:
+ * ANU (The Architect): The systems architecture and technical execution division of SATCORP. Oversees full-stack engineering, infrastructure deployment, enterprise solutions, and custom digital development. Utilizes a structured "Tactical Concierge" engagement framework consisting of three operational phases: Clarity (discovery/truth extraction), Scope (architecture/solution design), and Execution (development/deployment).
+ * KYRAX (The Brain): SATCORP's core artificial intelligence and cognitive architecture. Serves as the cognitive foundation across all divisions, handling automated workflow operations, player/audience analytics, dynamic NPC behaviors, procedural world generation, and autonomous decision-making systems.
+ * Ki-Ra Studios (The Creator): The interactive entertainment and game development division of SATCORP. Focuses on persistent online worlds, cross-platform experiences, and consequence-driven multiplayer games built in Unreal Engine 5 and Unity 6.
+   * NAMTAR: Primary open-world post-apocalyptic tactical sci-fi survival game (UE5) featuring destructible environments and KYRAX AI integration across vehicles, bases, and NPC Empires.
+   * NAMTAR RELENTLESS: Mobile 4X strategy game (Unity 6) set on the same planet, focused on short-session outpost survival against planetary maintenance forces.
+   * FORFEITURE: Persistent first-person crime simulation (UE5) pitting player-driven criminal supply chains against player-driven law enforcement.
+   * STREET LEVEL: Crew-based persistent crime simulation focusing on territory control, safehouses, and multi-tiered undercover police mechanics.
+   * Live Operations: Management of self-hosted dedicated server networks and game clusters (e.g., ARK: Survival Ascended clusters including NAMTAR, HYPERION, and FROSTHEIM).
+ * PULSE (The Heartbeat): The media, community, and creator network platform of SATCORP. Manages live event broadcasts, curated creator channels, interactive digital gatherings, and real-time engagement analytics integrated with KYRAX telemetry.
+Organizational Hierarchy & Governance Blueprint:
+ * Rank I (Division Leadership): Chief Systems Architect (ANU), Director of Cognitive Systems (KYRAX), Executive Producer / Studio Head (Ki-Ra Studios), Director of Media & Community Ecosystems (PULSE).
+ * Rank II (Department Leads & Directors): Principal Infrastructure Engineer, Game Director, Head of Broadcast Systems, Lead AI Architect.
+ * Rank III (Senior Specialists): Full-Stack Systems Developer, Machine Learning Engineer, Systems Designer, Engine Programmer, Live Event Producer.
+ * Rank IV (Operations & Execution): Hardware Provisioning Technician, Telemetry Analyst, LiveOps Server Administrator, Community Manager.
