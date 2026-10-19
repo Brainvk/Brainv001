@@ -1,0 +1,23 @@
+TITLE: SATCORP Motorcade Implementation Guide for ANU Route (/anu)
+DATA ENTRY:
+Overview & Architecture
+ * The Motorcade project replaces the presentation layer of the ANU route (/anu) with a continuous ride through a single district while keeping the existing content, SEO surface, and ecosystem chrome intact.
+ * The tech stack leverages Next.js, React, React Three Fiber (R3F), Drei, Postprocessing, Three.js, GSAP, and Zustand.
+ * The DOM version ships first as the definitive source of truth and an independent fallback; the 3D canvas sits behind it at position fixed with a z-index of 0, while the grain overlay sits at z-index 60.
+ * Lenis scroll smoothing is explicitly excluded to keep the native scrollbar, keyboard paging, and find-in-page honest, avoiding lagging double-damping layers.
+The Contract & Theme Adjustments
+ * ANU's existing contract values are adopted directly, including a static camera language, a 32-degree vertical FOV, an exposure of 0.9, a fog density of 0.09, and a tempo of 1.4.
+ * A single contract amendment appends 'halation' to the post-processing array (alongside 'dof' and 'vignette') to generate proper bloom around the glass and streetlights.
+Ride Mapping & Beats
+ * The page is re-sequenced into seven contiguous beats (01 to 07): Departure, The Thesis, Truth Extraction, The Model, Oversight, The Catalogue, and Arrival.
+ * Beat 03 ("Truth Extraction") serves as the sole hold in the ride, stopping at a red light where the outside world goes entirely still except for the rain.
+ * Content is delivered via handed objects across the seat at each stop: a sealed envelope, a ledger in oxblood ink, a tablet/reel, a handset, an annotated map, a broadcast feed, and the final intake form card.
+Technical Implementation Details
+ * Progress Store: Scroll writes a normalized progress value via GSAP ScrollTrigger without scrubbing, pinning, or hijack, ensuring React never re-renders on scroll.
+ * Camera Rig: Bolted to the near-side rear seat, the camera remains stationary while the district translates past it, featuring a damped look-around (yaw ±14°, pitch ±7°) and a suspension float of 1.4cm at 0.6Hz.
+ * Lighting & Sweep: Almost all geometry is static and baked, powered dynamically by a single moving key spotlight (the sweep) passing every ~1.9 seconds multiplied by tempo, occasional oncoming headlamps, a slow district color fill, and a constant weak practical light.
+ * Capability Gating & Mobile: A capability gate checks for WebGL2, hardware concurrency >= 4, device memory, and reduced motion preferences before mounting. On mobile and narrow viewports, the heavy interior model is dropped entirely, leaving only the window plane, rain shader, and sweep.
+Safety, Access & Build Phases
+ * Reduced motion preferences completely disable the 3D scene to prevent vestibular triggers, defaulting directly to the fully readable DOM page.
+ * A persistent on-screen brake control allows users to freeze the scene into a static lit tableau at any time.
+ * The build order is strictly sequenced to fail cheaply: (1) Flat route DOM re-sequence, (2) Stand up the renderer, (3) Grey-box the ride, (4) Light and glass, (5) Dress the cabin, and (6) Arrival and polish.
